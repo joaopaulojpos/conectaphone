@@ -2,16 +2,16 @@ function calculo(val1, val2) {
   valor_compra = parseInt(val1);
   valor_entrada = val2;
 
-  var taxas = [2.50, 3.75, 4.20, 4.60, 5.20, 5.50, 6.10, 6.70, 7, 7.30, 7.80, 8.10, 8.40, 8.70, 9.20, 9.80, 10.20, 10.50];
-  let taxa_debito = 1.20;
+  var taxas = [2.50, 3.95, 4.40, 4.90, 5.40, 5.92, 6.60, 7.15, 7.65, 8.20, 8.60, 9, 9.55, 10.20, 10.50, 11, 11.50, 12];
+  //let taxa_debito = 1.20;
   var valor_parcelas = [];
   var valor_total = [];
 
   var valor = valor_compra - valor_entrada;
 
   //parte da taxa de débito
-  let percentual_debito = (taxa_debito * valor) / 100;
-  let debito_total = valor + percentual_debito;
+  //let percentual_debito = (taxa_debito * valor) / 100;
+  //let debito_total = valor + percentual_debito;
   
   var i = 0;
   while (taxas[i]) {
@@ -28,10 +28,10 @@ function calculo(val1, val2) {
     valor_total[i].toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + "</td></tr>";
   }
 
-  debito_linha = "<tr>" + "<td>" + "Débito " + "</td>" + "<td>" + debito_total.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + "</td>" + "<td>" + 
-  debito_total.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + "</td></tr>";
+  //debito_linha = "<tr>" + "<td>" + "Débito " + "</td>" + "<td>" + debito_total.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + "</td>" + "<td>" + 
+  //debito_total.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + "</td></tr>";
 
-  document.getElementById("exibir").innerHTML = debito_linha + table;
+  document.getElementById("exibir").innerHTML = table;
 
 }
 
